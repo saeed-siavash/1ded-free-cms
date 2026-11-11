@@ -1,0 +1,13 @@
+services:
+  cms:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:-http://localhost:3000}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+    volumes:
+      - cms-data:/app/data
+volumes:
+  cms-data:

@@ -1,0 +1,25 @@
+{
+  "name": "1ded-free-cms",
+  "version": "0.4.1",
+  "private": true,
+  "description": "A small, self-hosted CMS that publishes independent static websites.",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test",
+    "reset-password": "node cli.mjs reset-password",
+    "backup": "node cli.mjs backup"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saeed-siavash/1ded-free-cms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saeed-siavash/1ded-free-cms/issues"
+  },
+  "homepage": "https://github.com/saeed-siavash/1ded-free-cms#readme"
+}

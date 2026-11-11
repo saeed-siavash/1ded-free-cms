@@ -5,7 +5,8 @@
 - Prepared the first public GitHub presentation with an illustrated README, a full introductory article, and a browsable gallery.
 - Added actual screenshots for all 15 subject starters and eight visual themes.
 - Preserved the detailed user guide and documented the production release-readiness roadmap.
-- Documentation and presentation update; the application remains a beta and no independent security certification is claimed.
+- Completed temporary backup cleanup before sending the download response, avoiding a shutdown race on Windows, with bounded retries for temporary file locks.
+- The application remains a beta and no independent security certification is claimed.
 
 
 ## 0.4.0 — 2026-11-11

@@ -1,9 +1,7 @@
 # Contributing
 
-Use Node.js 24+, run `node --test`, and start `node server.mjs` against a disposable DATA_DIR. There is no dependency install step.
+The current supported application is in php-edition/. Read its README and docs/TESTING.md. Run PHP syntax checks, RFC 6238 vectors and the integration suite before submitting a pull request. Development tests use Node.js 24+; site owners do not need Node to run PHP.
 
-Keep changes focused, explain the user problem, and include relevant tests for validation, access control, rendering, or publishing. Test admin interactions and generated pages on desktop and mobile. Check keyboard access and preserve reduced-motion behavior.
+Use a dedicated disposable database for MariaDB integration. Never run tests against a user's installation. Preserve schema compatibility, private data and the separation between drafts and publication. Include a regression test for security-sensitive behavior. Never commit installed.php, INSTALL-KEY.txt, private directories, accounts, backups, MFA keys, access tokens or generated test fixtures.
 
-Do not submit runtime databases, media, installation tokens, passwords, customer data, or local backups. New third-party assets must include license information. Keep the dependency-free installation promise unless a change clearly justifies a dependency.
-
-The repository owner should add their support and private security contact details before publishing. This project has no telemetry or automatic update endpoint.
+Document user-visible changes and update the PHP changelog. Do not run the release packager against an installed source tree. Report vulnerabilities privately as described in SECURITY.md. Opening a contribution does not transfer your copyright; contributions are accepted under this project's MIT license.

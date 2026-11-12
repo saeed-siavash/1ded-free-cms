@@ -1,0 +1,6 @@
+app/installed.php
+app/INSTALL-KEY.txt
+*.zip
+*.sqlite*
+.env
+tests/runtime/

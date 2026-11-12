@@ -1,0 +1,11 @@
+Options -Indexes
+DirectoryIndex index.php
+<FilesMatch "^(INSTALL-KEY\.txt|.*\.(sqlite|sql|log|bak|env|json|zip))$">
+  Require all denied
+</FilesMatch>
+RewriteEngine On
+RewriteRule ^(?:app|tests|docs)(?:/|$) - [F,END]
+RewriteRule ^(?:\.git|\.env)(?:/|$) - [F,END]
+RewriteRule ^assets/.*\.php$ - [F,END]
+RewriteRule ^assets/ - [END]
+RewriteRule ^ index.php [END]

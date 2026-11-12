@@ -1,11 +1,5 @@
-# Security
+# Security policy
 
-This first public beta has functional security tests but has not received an independent security audit. Use HTTPS, keep Node updated, run as an unprivileged user, protect backups, and follow docs/DEPLOYMENT.md.
+The current PHP release policy and implemented controls are documented in [php-edition/SECURITY.md](php-edition/SECURITY.md). Security fixes target the latest PHP 1.x patch release. The older Node preview is separate and is not covered by PHP test results or the PHP stable designation.
 
-Report vulnerabilities privately to the repository owner through GitHub private vulnerability reporting if enabled. Do not include credentials, real customer information, or live exploitation details in public issues. The owner should enable private reporting or add a monitored security email before public release.
-
-Current boundaries: one trusted owner, restricted editors, public image URLs, no MFA, no email recovery, in-memory rate limits, one server process, and no concurrent-edit merge UI (stale saves are rejected). A compromised server account can access the SQLite database; filesystem permissions and backups are part of deployment security.
-
-The included setup token is generated per installation at runtime. Source releases must not include DATA_DIR, `.env`, backup databases, or live sessions.
-
-Offline updates accept only trusted release assets. Manifest hashes detect corruption but do not authenticate the release author. Verify the independently published ZIP checksum. ZIP extraction rejects traversal, symlinks, duplicate paths, unsupported compression, and excessive sizes. Backups contain sensitive account and enquiry data; keep them outside public web roots.
+Use [GitHub private vulnerability reporting](https://github.com/saeed-siavash/1ded-free-cms/security/advisories/new) if enabled. Otherwise contact the maintainer through the GitHub profile to arrange a private channel before sending exploit details. Do not post credentials or customer data in public issues. No response-time SLA or independent security certification is promised.
